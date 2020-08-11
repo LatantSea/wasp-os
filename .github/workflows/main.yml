@@ -53,5 +53,7 @@ jobs:
     - name: Build Firmware
       run: make -j `nproc` BOARD=pinetime all
       
-    - name: Upload Artifacts
-      run: ls -l
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Upload Artifacts
+        path: build-pinetime/
