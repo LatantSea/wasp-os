@@ -47,6 +47,7 @@ jobs:
     - name: Make Prerequisites
       run: |
         make submodules BOARD=pinetime all
+        ./drivers/bluetooth/download_ble_stack.sh
         make softdevice BOARD=pinetime all
         
     - name: Build Firmware
