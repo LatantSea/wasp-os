@@ -43,15 +43,15 @@ jobs:
         npm install --global xpm
         xpm install --global @xpack-dev-tools/arm-none-eabi-gcc@latest
         echo "::add-path::`echo $HOME/opt/xPacks/@xpack-dev-tools/arm-none-eabi-gcc/*/.content/bin`"
-        
-    - name: Make Prerequisites
-      run: |
         ./micropython/ports/nrf/drivers/bluetooth/download_ble_stack.sh
+        
+    - name: Build Project
+      run: |
         make submodules BOARD=pinetime all
         make softdevice BOARD=pinetime all
         
-    - name: Build Firmware
-      run: make -j `nproc` BOARD=pinetime all
+    #- name: Build Firmware
+      #run: make -j `nproc` BOARD=pinetime all
       
     - uses: actions/upload-artifact@v2
       with:
