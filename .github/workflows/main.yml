@@ -46,8 +46,6 @@ jobs:
         
     - name: Make Prerequisites
       run: |
-        ls -l
-        cd wasp-os
         make submodules
         make softdevice
         
