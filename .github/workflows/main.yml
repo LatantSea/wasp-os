@@ -24,6 +24,10 @@ jobs:
 
     - name: Setup Node.js
       uses: actions/setup-node@v1.1.0
+      #If you're compiling at home, you need at least nodejs v10 for xpm to function. Ubuntu 18.04 LTS repositories will only give you v8, so update it manually:
+      # sudo apt install curl
+      # curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+      # sudo apt install nodejs
       
     - name: Checkout Code
       uses: actions/checkout@v1
