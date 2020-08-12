@@ -56,7 +56,7 @@ jobs:
         gcc --version
         #arm-none-eabi-gcc --version
         $GITHUB_WORKSPACE
-        $PATH
+        #$PATH
         #make -v
         
     - name: Build Project
