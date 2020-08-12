@@ -26,6 +26,7 @@ from apps.flashlight import FlashlightApp
 from apps.heart import HeartApp
 from apps.launcher import LauncherApp
 from apps.pager import PagerApp, CrashApp, NotificationApp
+from apps.settime import SetTimeApp
 from apps.settings import SettingsApp
 from apps.steps import StepCounterApp
 from apps.stopwatch import StopwatchApp
@@ -118,6 +119,7 @@ class Manager():
         self.register(StopwatchApp(), True)
         self.register(HeartApp(), True)
         self.register(FlashlightApp(), False)
+        self.register(SetTimeApp(), False)
         self.register(SettingsApp(), False)
         self.register(TestApp(), False)
 
