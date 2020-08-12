@@ -54,10 +54,10 @@ jobs:
         npm -v
         xpm --version
         gcc --version
-        arm-none-eabi-gcc --version
+        find / arm-none-eabi-gcc #--version
         $GITHUB_WORKSPACE
         $PATH
-        make -v
+        find / make #-v
         
     - name: Build Project
       run: |
