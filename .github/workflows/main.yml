@@ -55,7 +55,7 @@ jobs:
         xpm --version
         gcc --version
         #arm-none-eabi-gcc --version
-        $GITHUB_WORKSPACE
+        #$GITHUB_WORKSPACE
         #$PATH
         #make -v
         
